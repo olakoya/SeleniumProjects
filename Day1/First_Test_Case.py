@@ -40,3 +40,12 @@ driver.close()
 Output is 
 Title: Test Passed
 '''
+
+'''
+Output after editing line 28 with a wrong Google spelling 'Googleing' is 
+Title: Test Failed
+'''
+'''
+Output when commenting line 37 is that chrome page didn't close automatically after opening
+Title: Test Passed
+'''
