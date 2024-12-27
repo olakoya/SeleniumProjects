@@ -9,48 +9,49 @@ pystark
 '''
 Introduction to Selenium WebDriver
 -----------------------------------
-Selenium contains a Suite and this suite contains component
-Selenium is a single tool
+- Selenium contains a Suite and this suite contains component.
+- Selenium is a single tool.
 
 Selenium Suite Components
 ---------------------------
-    i. Selenium IDE ==> This is a browser extension and can be called record anf playback tool
+    i. Selenium IDE ==> This is a browser extension and can be called record and playback tool.
     ii. Selenium WebDriver ==> This is the most important tool and has a combination of tools. It's used for automation purpose and
-     interact with browser with the help of programming language. And this is most important, popular and powerful tool
-    iii. Selenium RC ==> It's combined with selenium IDE itself
-    iv. Selenium Grid ==> This is used for parallel testing on multiple platforms and browser
+     interact with browser with the help of programming language. And this is the most important, popular and powerful tool.
+    iii. Selenium RC ==> It's combined with selenium IDE itself.
+    iv. Selenium Grid ==> This is used for parallel testing on multiple platforms and browsers.
 
-Selenium is a package
-WebDriver is a module
-Module contains Functions and Classes
+- Selenium is a package
+- Package is a Webdriver
+- WebDriver is a module
+- Module contains Functions and Classes
 
-Package contains => Modules
-Modules contains => Functions and Classes
+- Package contains => Modules
+- Modules contains => Functions and Classes
 
-Chrome Browser calls ==> Chrome class()
-Edge Browser calls ==> Edge class()
-Firefox Browser ==> Firefox class()
+- Chrome Browser calls ==> Chrome class()
+- Edge Browser calls ==> Edge class()
+- Firefox Browser ==> Firefox class()
 
-Selenium WebDriver is only used to automate GUI or web application
-Selenium WebDriver cannot automate APIs and DeskTop Application
-WebDriver is an programming interface and it's act like an API
-Every web application in this modean world follows client - server architecture
+- Selenium WebDriver is only used to automate GUI or web application.
+- Selenium WebDriver cannot automate APIs and Desktop Application.
+- WebDriver is a programming interface, and it's act like an API.
+- Every web application in this modean world follows client - server architecture.
 
 3 Types of Layers
 -----------------=
-Presentation Layer
-API Layer
-Backend Layer
+1. Presentation Layer
+2. API Layer
+3. Backend Layer
 
 Setting Up and Installation
 ----------------------------
-1. Python ==> A programming language
-2. Pycharm ==> Clients Library
-Selenium WebDriver ==> Automation tools
+1. Python ==> Dpwnload python programming language
+2. Pycharm ==> Dpwnload Clients Library (Pycharm)
+3. Selenium WebDriver ==> Download Selenium Automation tools
 
 Below is steps to install Selenium WebDriver
-i. Opening on Pycharm for new project
-ii. Install Pip package name using terminal
+i. Opening on Pycharm for new project by clicking on new project in Pycharm software
+ii. Type install Pip package name using new project terminal after opening the new project
         Pip list will show and check all packages installed
 iii. Pycharm project settings
         Go to pycharm and click on settings
@@ -67,9 +68,9 @@ iv. Requirements.txt file ==> pom.xml
 
 Types of packages
 ------------------
-selenium
-pandas
-matplotlib
+1. selenium
+2. pandas
+3. matplotlib
 
 In terminal type 'pip install -r requirements.txt'
 Type pip list to verify installation
@@ -86,12 +87,12 @@ First Test Cases Example
 
 Steps
 -----
-Go to pycharm
-Right click on selenium and select New
-Click on New and select Directory
-Give the Directory a name
-Right click on created Directory and click on New
-On new, select python file
-And then give it a name
+1. Go to pycharm
+2. Right click on created project named selenium and select New
+3. Click on New and select Directory
+4. Give the Directory a name
+5. Right click on created Directory and click on New
+6. On new, select python file
+7. And then give it a name
 
 '''
