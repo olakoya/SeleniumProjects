@@ -2,7 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 # set up chrome option
-# options = webdriver.ChromeOptions()# object reference variable is webdriver
 # class method is chromeoptions and object reference variable is options
 
 # set up chrome options
@@ -16,7 +15,7 @@ service = Service(ChromeDriverManager().install())
 # Initialise the Webdriver with the options
 driver = webdriver.Chrome(service=service, options=options)# webdriver is a module and consists of a class 'chrome'
 # browser specific option is chromeoptions
-# options is a parameter while opt is a value
+# options is a parameter while opt is a value as taught in the class but not using opt due to my mac operating system
 # option reference variable is driver
 
 # With the help of driver open an application url
@@ -46,6 +45,6 @@ Output after editing line 28 with a wrong Google spelling 'Googleing' is
 Title: Test Failed
 '''
 '''
-Output when commenting line 37 is that chrome page didn't close automatically after opening
+Output when commenting line 36 is that chrome page didn't close automatically after opening
 Title: Test Passed
 '''
