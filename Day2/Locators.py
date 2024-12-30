@@ -160,6 +160,21 @@ print("Typing in the search box")
 driver.find_element(By.NAME, "submit_search").click()
 print("Clicking the search button")
 
+# LINK/PARTIAL LINK TEXT
+# driver.find_element(By.LINK_TEXT, "Printed Chiffon Dress").click()
+# print("Search item selected")
+
+driver.find_element(By.PARTIAL_LINK_TEXT, "Printed Chiffon Dress").click()
+print("Search item selected")
+
 # to enter a text one needs to use a 'send_keys()' method and for click action will use 'click()' method and clear for 'clear()'
 # Add your test logic here
-# driver.close()
+driver.close()
+
+'''
+Output is
+Navigated to the website
+Typing in the search box
+Clicking the search button
+Search item selected
+'''

@@ -34,6 +34,13 @@ try:
     print("Clicking the search button")
     search_button.click()
 
+    # Wait for item to display
+    search_button = WebDriverWait(driver, 20).until(
+        EC.element_to_be_clickable((By.LINK_TEXT, "Printed Chiffon Dress"))
+    )
+    print("Search item selected")
+    search_button.click()
+
 except Exception as e:
     print(f"An error occurred: {e}")
 
@@ -41,3 +48,12 @@ finally:
     # Close the browser
     print("Closing the browser")
     driver.quit()
+
+'''
+Output is
+Navigated to the website
+Typing in the search box
+Clicking the search button
+Search item selected
+Closing the browser
+'''

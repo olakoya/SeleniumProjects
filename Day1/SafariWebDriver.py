@@ -22,3 +22,8 @@ input("Press Enter to close the browser...")
 
 # Close the browser
 driver.close()
+
+'''
+Output is
+Title: Test Passed
+'''
