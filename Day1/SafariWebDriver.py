@@ -1,7 +1,7 @@
 from selenium import webdriver
-
+opt=webdriver.SafariOptions()
 # Initialize the Safari WebDriver
-driver = webdriver.Safari()
+driver = webdriver.Safari(options=opt)
 
 # Open the application URL
 driver.get("https://www.google.com/")
@@ -17,7 +17,7 @@ if act_title == exp_title:
 else:
     print("Title: Test Failed")
 
-# Keep the browser open after the script finishes (useful for debugging)
+# Keep the browser open after the script finishes
 input("Press Enter to close the browser...")
 
 # Close the browser
