@@ -37,14 +37,14 @@ driver.get("http://www.automationpractice.pl/index.php")
 print("Navigated to the website")
 driver.maximize_window()
 
-# class locator strategy
-# sliders_count = driver.find_elements(By.CLASS_NAME, "homeslider-description")
-# print(len(sliders_count))
-#
-# for ele in sliders_count:
-#     print(ele.text)
-#
-# driver.close()
+class locator strategy
+sliders_count = driver.find_elements(By.CLASS_NAME, "homeslider-description")
+print(len(sliders_count))
+
+for ele in sliders_count:
+    print(ele.text)
+
+driver.close()
 
 '''
 Output is 
