@@ -30,12 +30,12 @@ Selenium Suite Components
 
 - Chrome Browser calls ==> Chrome class()
 - Edge Browser calls ==> Edge class()
-- Firefox Browser ==> Firefox class()
+- Firefox Browser calls ==> Firefox class()
 
 - Selenium WebDriver is only used to automate GUI or web application.
 - Selenium WebDriver cannot automate APIs and Desktop Application.
 - WebDriver is a programming interface, and it's act like an API.
-- Every web application in this modean world follows client - server architecture.
+- Every web application in this modern world follows client - server architecture.
 
 3 Types of Layers
 -----------------=
@@ -45,8 +45,8 @@ Selenium Suite Components
 
 Setting Up and Installation
 ----------------------------
-1. Python ==> Dpwnload python programming language
-2. Pycharm ==> Dpwnload Clients Library (Pycharm)
+1. Python ==> Download python programming language
+2. Pycharm ==> Download Clients Library (Pycharm)
 3. Selenium WebDriver ==> Download Selenium Automation tools
 
 Below is steps to install Selenium WebDriver

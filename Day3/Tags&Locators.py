@@ -3,14 +3,14 @@ Types of Customised Locators
 -----------------------------
 One can't directly find these locators on the html code and they are;
 
-i. CSS Selectors (To read more about css click on the css.png file on Day3)
-ii. XPath
+i. CSS Selectors (To read more about css click on the css selector.pdf file on Day3)
+ii. XPath (To read more about xpath click on the css selector.pdf file on Day3)
 
-SHADOW DUMB ELEMENT is element that has no attribute and found under shadow-root (open)
-The above can be found when inspecting the search box on google page when a new chrome tab is opened
+SHADOW DUMB ELEMENT is element that has no attribute and can be found under shadow-root (open)
+The above can be found when inspecting the search box on Google page when a new Chrome tab is opened
 
-However only css selectors can be used to locate the element in this case of having a shadow dumb element
-(refer to the css.png file to read more)
+However, only css selectors can be used to locate the element in this case of having a shadow dumb element
+(refer to the css.pdf file to read more)
 
 How to write CSS Selectors?
 ----------------------------
@@ -22,7 +22,8 @@ How to write CSS Selectors?
 How to locate a Web Element?
 ------------------------------
 Combining the selectors name to find the web element easily
-E.g: Inspecting facebook login page and inspecting it, then copy HTML of the email text box
+E.g: Inspecting a facebook login page, then copy HTML of the email text box as seen below;
+
 <input type="text" class="inputtext _55r1 _6luy" name="email" id="email" data-testid="royal_email" placeholder="Email
 address or phone number" autofocus="1" aria-label="Email address or phone number">
 
@@ -35,10 +36,10 @@ Equals ==> input#email (put this in the search text box on the inspect page retu
 
 2. class + Tagname: (.)
 ------------------------
-tagname.vale of the class attribute
+tagname.value of the class attribute
             class value is "inputtext _55r1 _6luy"
             input is tagname
-==> input.inputtext _55r1 _6luy (But due to spaces inbetween this is an invalid value so we select the text only before the space)
+==> input.inputtext _55r1 _6luy (This is an invalid value due to spaces inbetween, so we select the text only before the space)
  Equals ==> input.inputtext
 
  3. attribute + Tagname: ([])
@@ -59,22 +60,22 @@ E.g
 '''
 from selenium import webdriver
 from selenium.webdriver.common.by import By # 'by' is a module and inside it we have a class 'By'
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
+# from selenium.webdriver.chrome.service import Service
+# from webdriver_manager.chrome import ChromeDriverManager
 
-# Set up Chrome options
+# Setting up Chrome options
 options = webdriver.ChromeOptions()
+options.add_experimental_option("detach" , True)
+# Creating the Service object
+# service = Service(ChromeDriverManager().install())
 
-# Create the Service object
-service = Service(ChromeDriverManager().install())
+# Initializing the WebDriver with Service and options
+driver = webdriver.Chrome(options=options)
 
-# Initialize the WebDriver with Service and options
-driver = webdriver.Chrome(service=service, options=options)
-
-# Perform your tasks
-driver.get("https://www.facebook.com/")
-# print("Navigated to the website")
+# Perform task
+driver.get("https://www.ebay.com/")
+print("Navigated to the website")
 driver.maximize_window()
 
-# using nos 4 from the above combined css selectors
-driver.find_element(By.CSS_SELECTOR, "input.inputtext[data-testid=royal_email]").send_keys(("Ola"))
+# Using nos 4 from the above combined css selectors notes
+# driver.find_element(By.CSS_SELECTOR, "input.inputtext[data-testid=royal_email]").send_keys(("Ola"))

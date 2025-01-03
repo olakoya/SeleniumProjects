@@ -9,7 +9,7 @@ Locator is an address that is used to locate web elements to perform some action
 There are some cases that a locator can locate multiple elements e.g inspect a webpage and search element (//h2) the
 output will display total number of the particular word on the page
 
-There are 3 types of Scenarios and they can be found in the FindElement.png file in the Day3 directory
+There are 3 types of Scenarios that can be found in the FindElement.png file in the Day3 directory
 
 Tags and class names are used to locate web elements most of the time
 
@@ -37,14 +37,14 @@ driver.get("http://www.automationpractice.pl/index.php")
 print("Navigated to the website")
 driver.maximize_window()
 
-class locator strategy
-sliders_count = driver.find_elements(By.CLASS_NAME, "homeslider-description")
-print(len(sliders_count))
-
-for ele in sliders_count:
-    print(ele.text)
-
-driver.close()
+# class locatorstrategy:
+#     sliders_count = driver.find_elements(By.CLASS_NAME, "homeslider-description")
+#     print(len(sliders_count))
+#
+#     for ele in sliders_count:
+#         print(ele.text)
+#
+# driver.close()
 
 '''
 Output is 
