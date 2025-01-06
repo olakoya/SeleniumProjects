@@ -80,26 +80,26 @@ Output is
 Animesh
 '''
 
-# # Parent
-# text_msg = driver.find_element(By.XPATH, "//td[text()='Animesh']/parent::tr").text
-# print((text_msg))
+# 1. Parent
+text_msg = driver.find_element(By.XPATH, "//td[text()='Animesh']/parent::tr").text
+print((text_msg))
 '''
 Output is 
 Learn JS Animesh Javascript 300
 '''
 
-# Childs and using childs method and elements to return list due to multiple of children
+# 2. Childs and using childs method and elements to return list due to multiple of children
 
-# childs = driver.find_elements(By.XPATH, "//td[text()='Animesh']/parent::tr/child::td")
-# print(len(childs))
+childs = driver.find_elements(By.XPATH, "//td[text()='Animesh']/parent::tr/child::td")
+print(len(childs))
 '''
 Output is 
 4
 '''
 
 # Child
-# child = driver.find_element(By.XPATH, "//td[text()='Animesh']/parent::tr/child::td")
-# print(child.text)
+child = driver.find_element(By.XPATH, "//td[text()='Animesh']/parent::tr/child::td")
+print(child.text)
 
 '''
 Output is
@@ -107,9 +107,9 @@ Learn JS
 '''
 
 # Childs with the for statement
-# childs = driver.find_elements(By.XPATH, "//td[text()='Animesh']/parent::tr/child::td")
-# for child in childs:
-#     print(child.text)
+childs = driver.find_elements(By.XPATH, "//td[text()='Animesh']/parent::tr/child::td")
+for child in childs:
+    print(child.text)
 '''
 Output is
 Learn JS
@@ -118,7 +118,7 @@ Javascript
 300
 '''
 
-# Ancestor
+# 3. Ancestor
 text_msg = driver.find_element(By.XPATH, "//td[text()='Animesh']/ancestor::tr").text
 print((text_msg))
 '''
@@ -126,7 +126,7 @@ Output is
 Learn JS Animesh Javascript 300
 '''
 
-# Descendants
+# 4. Descendants
 descendants = driver.find_elements(By.XPATH, "//td[text()='Animesh']/parent::tr/descendant::td")
 print(len(descendants))
 '''
@@ -134,7 +134,7 @@ Output is
 4
 '''
 
-# Following
+# 5. Following
 following = driver.find_elements(By.XPATH, "//td[text()='Animesh']/parent::tr/following::*")
 print(len(following))
 '''
@@ -142,7 +142,7 @@ Output is
 489
 '''
 
-# Preceding
+# 6. Preceding
 preceding = driver.find_elements(By.XPATH, "//td[text()='Animesh']/parent::tr/preceding::*")
 print(len(preceding))
 '''
