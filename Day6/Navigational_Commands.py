@@ -12,13 +12,10 @@ import time
 
 from attr.validators import max_len
 from selenium import webdriver
-# from selenium.webdriver.common.by import By # 'by' is a module and inside it we have a class 'By'
 opt = webdriver.ChromeOptions()
 opt.add_experimental_option("detach" , True)
 driver = webdriver.Chrome(options=opt)
 driver.get("https://www.ebay.com/") # driver.get helps to easily open url application
-# driver.maximize_window() # this is use to expand the url page to fullscreen by using a 'driver' variable
-# driver.implicitly_wait(10) # To avoid some exceptions implicit wait is used
 
 time.sleep(3)
 

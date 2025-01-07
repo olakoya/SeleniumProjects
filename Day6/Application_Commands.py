@@ -36,10 +36,10 @@ driver.get("https://testautomationpractice.blogspot.com/") # driver.get helps to
 driver.maximize_window() # this is use to expand the url page to fullscreen by using a 'driver' variable
 driver.implicitly_wait(10) # To avoid some exceptions implicit wait is used
 
-# print(driver.title)# title method will return command
-# print(driver.current_url)
-# print(driver.page_source)
-# print((driver.current_window_handle))
+print(driver.title)# title method will return command
+print(driver.current_url)
+print(driver.page_source)
+print((driver.current_window_handle))
 
 '''
 Output is
