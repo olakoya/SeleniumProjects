@@ -58,13 +58,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By # 'by' is a module and inside it we have a class 'By'
 opt = webdriver.ChromeOptions()
 opt.add_experimental_option("detach" , True)
-
 driver = webdriver.Chrome(options=opt)
 driver.get("https://testautomationpractice.blogspot.com/") # driver.get helps to easily open url
 driver.maximize_window() # this is use to expand the url page to fullscreen
-
-# To avoid some exceptions implicit wait is used
-driver.implicitly_wait(10)
+driver.implicitly_wait(10) # To avoid some exceptions implicit wait is used
 
 # Lines of codes from 57 to 67 is Boiler Play Code is also known as Re-use-able Code
 # For every automation script we use the same codes over and over again
