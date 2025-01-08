@@ -96,3 +96,9 @@ Steps
 7. And then give it a name
 
 '''
+
+'''
+mouse over on to class or function or module
+
+ctrl+click on left button on mouse
+'''

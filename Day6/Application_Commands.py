@@ -12,7 +12,7 @@ Types of Commands
     i. Get method () ==> This is use to open application url
     ii. Title method () ==> This returns title of a webpage
     ii. Current _url () ==> This will capture or return current url of a webpage
-    iv. Page_source () ==> This will capture tge source code of the webpage
+    iv. Page_source () ==> This will capture the source code of the webpage
     v. Current_window_handle ==> This will return id of the current browser window
     vi. Window_handles ==> This will return ids of all current opened windows
 
@@ -20,8 +20,8 @@ Types of Commands
 
     Different types of Browser Commands are:
     --------------------------------------------
-    i. Close method () ==> This is to close single browser window (where driver focused) i.e., parent window
-    ii. Quit method () ==> This is the close multiple browser windows (this will kill the process)
+    i. Close method () ==> This is to close single browser window (where driver focused) i.e. parent window
+    ii. Quit method () ==> This is to close multiple browser windows (this will kill the process)
 
 E.g
 '''
@@ -37,16 +37,18 @@ driver.maximize_window() # this is use to expand the url page to fullscreen by u
 driver.implicitly_wait(10) # To avoid some exceptions implicit wait is used
 
 print(driver.title)# title method will return command
-print(driver.current_url)
-print(driver.page_source)
-print((driver.current_window_handle))
+print(driver.current_url) # return current url of a webpage
+print(driver.page_source) # capture the source code of the webpage
+print((driver.current_window_handle)) # return id of the current browser window
 
 '''
 Output is
 1. Url title page: Automation Testing Practice
-2. Window id: E9AE2A37AC2C2B6ADE47FCEC93EE706C
+2. Url of the page : https://testautomationpractice.blogspot.com/
+3. Window id: E9AE2A37AC2C2B6ADE47FCEC93EE706C
+4. Source code: Below is some of the source code of the page
 e.t.c.
-Below is some of the real output but due to the large output it's impossible to paste it here
+Below is some of the real output but due to the large output it's impossible to paste all here
 
 Automation Testing Practice
 https://testautomationpractice.blogspot.com/
@@ -69,7 +71,7 @@ driver.get("https://www.facebook.com/")
 print(driver.window_handles)
 
 '''
-Output is displaying window ids from both Automation Testing Practice webpage and Facebook
+Output is displaying window ids from both Automation Testing Practice webpage and Facebook page
 ['60FFDCB9AFF428C64EE7B70C26D7C92B', '2BCDF333680E61CBA49D5E52E0DEFEA8']
 '''
 

@@ -3,7 +3,7 @@
 
     Different types of Conditional Commands are:
     --------------------------------------------
-    i. is_displayed method () ==> To check link if is displayed before clicking on --> Applicable for all elements
+    i. is_displayed Method () ==> To check link if is displayed before clicking on --> Applicable for all elements
     ii. is_enabled Method () ==> To check if the element displayed is enabled in order to interact with it --> Applicable for all elements
     iii. is_selected Method () ==> This is selection based conditional command e.g checkbox, radio button etc --> Only for Checkboxes and Radio buttons
 
@@ -44,6 +44,7 @@ female_rd = driver.find_element(By.ID, "female")
 print(female_rd.is_selected()) # conditional command
 
 time.sleep(3)
+
 male_rd.click()
 
 # this is click command method

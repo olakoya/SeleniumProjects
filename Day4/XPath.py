@@ -2,11 +2,11 @@
 XPATH AND XPATH OPTIONS
 -----------------------
 Xpath is an XML Path
-It is used to find elements on the weebpage
+It is used to find elements on the webpage
 It is used for dynamically changing elements on the webpage e.g prices on a web page because it changes
 Xpath is also an address or syntax or a language to find elements on webpage using XML path expression
 
-In the HTML, code is called ==> Tagname
+In the HTML, code is called ==> Tag name
 In Xpath, code is called ==> Nodes
 
 To navigate through each and every node to locate web element
@@ -39,7 +39,7 @@ So, Absolute XPATH is unstable and Relative XPATH is preferred
 
 //*[@id="pass"] for email text box
 
-We use driver.find_element(By.Tagname,"Input) to locate an element in the web page html
+We use "driver.find_element(By.Tagname,"Input")" to locate an element in the web page html
 E.g
 '''
 
@@ -53,10 +53,10 @@ driver.get("https://demowebshop.tricentis.com/")
 driver.maximize_window()
 
 # Absolute XPath
-# driver.find_element((By.XPATH, "/html/body/div[4]/div[1]/div[1]/div[3]/form/input[1]")).send_keys("T-shirts")
+driver.find_element((By.XPATH, "/html/body/div[4]/div[1]/div[1]/div[3]/form/input[1]")).send_keys("T-shirts")
 
 # Relative XPath
-# driver.find_element(By.XPATH, "//*[@id='small-searchterms']").send_keys("T-shirts")
+driver.find_element(By.XPATH, "//*[@id='small-searchterms']").send_keys("T-shirts")
 
 driver.find_element(By.XPATH, "//input[@id='small-searchterms' and @value='Search store']").send_keys("Cars")
 

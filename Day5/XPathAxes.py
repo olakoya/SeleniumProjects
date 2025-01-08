@@ -18,7 +18,7 @@ tr has no attribute
 
 Scenario - 1
 -------------
-Supposing an element is not having aany attributes, how can we locate this element?
+Supposing an element is not having any attributes, how can we locate this element?
 Answer: Is by using any of the basic locators available
 
 Scenario - 2
@@ -26,7 +26,7 @@ Scenario - 2
 Even though if the elements are having attributes and the value of attributes are dynamically changing then how can we locate this element?
 Answer: Xpath axes is best to use
 
-Example is going to someone's house however, one needs to get to the Estate before getting to the house. Therefore, to the exact
+Example is going to someone's house however, one needs to get to the Estate before getting to the house. Therefore, to get the exact
 house one needs to locate the estate through a specific landmark to avoid wrong turning in order to easily get to the estate where
 the house is located.
 The house is a Dynamically Changing Element.
@@ -36,6 +36,7 @@ Solution
 ---------
 Scenario 1: Locate an element whose values of attributes are static which is near to element not having attributes using Xpath.
 Scenario 2: Located element is a Base Node or Current Node or Self Node or Context Node.
+
 From the Base element Traverse or Move or Navigate to element through the DOM from top to bottom, bottom to top which is not having
 any attributes or values of attributes changing.
 
@@ -63,15 +64,15 @@ driver.get("https://testautomationpractice.blogspot.com/") # driver.get helps to
 driver.maximize_window() # this is use to expand the url page to fullscreen
 driver.implicitly_wait(10) # To avoid some exceptions implicit wait is used
 
-# Lines of codes from 57 to 67 is Boiler Play Code is also known as Re-use-able Code
+# Lines of codes from 58 to 65 is Boiler Play Code which is also known as Re-use-able Code
 # For every automation script we use the same codes over and over again
 
 # Any element that wants to be used is called Base Element/Nodes, Character Element/Nodes or Context Element/Nodes or Self Nodes for all
 # Xpath will be used in this location
 
 # Self (Optional) and using text method to get the text
-# text_msg = driver.find_element(By.XPATH, "//td[text()='Animesh']").text
-# print(text_msg)
+text_msg = driver.find_element(By.XPATH, "//td[text()='Animesh']").text
+print(text_msg)
 '''
 Output is 
 Animesh
@@ -85,7 +86,7 @@ Output is
 Learn JS Animesh Javascript 300
 '''
 
-# 2. Childs and using childs method and elements to return list due to multiple of children
+# 2. Childs => using childs method and elements to return list due to multiple of children
 
 childs = driver.find_elements(By.XPATH, "//td[text()='Animesh']/parent::tr/child::td")
 print(len(childs))
