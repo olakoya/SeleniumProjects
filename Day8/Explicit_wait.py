@@ -14,8 +14,8 @@ Explicit_Wait
 --------------
 Dynamic wait isn't based on time
 And only applies to specific webelement.
-It can be only be used for certain conditions
-With the help of the webdriverwait class we can implement explicit wait
+It can only be used for certain conditions
+With the help of the 'webdriverwait' class we can implement explicit wait
 
 1. Declaration
     WebDriverWait() ==> Passing a parameter which is an argument
@@ -53,6 +53,6 @@ Output is error due to wrong locator however the explicit wait timed out after 1
     raise TimeoutException(message, screen, stacktrace)
 selenium.common.exceptions.TimeoutException: Message: 
 
-Output for an accurate id selector 'box0'
+Output for an accurate id selector 'box0' is
 True
 '''

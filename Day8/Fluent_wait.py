@@ -25,3 +25,8 @@ driver.find_element(By.ID , "adder").click()
 
 red_box = mywait.until(EC.visibility_of_element_located((By.ID , "box0")))
 print(red_box.is_displayed())
+
+'''
+Output is 
+True
+'''
