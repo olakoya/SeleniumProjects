@@ -1,4 +1,6 @@
 '''
+Full notes can be found in Day 7 (24. WebDriver Waiting Strategies.pdf)
+
 Waiting Strategies
 ----------------------
 time.sleep (10)
