@@ -40,28 +40,28 @@ driver.find_element(By.ID, "promptBtn").click()
 Output is
 Prompt alert popup box was displayed
 '''
-#
-# myalert = driver.switch_to.alert
-# print(myalert.text)
-# '''
-# Output is
-# Please enter your name:
-# '''
-#
-# myalert.send_keys("Ola")
-# myalert.accept()
-# # myalert.dismiss()
-# '''
-# Output displays as expected
-# '''
-#
-# # Validation
-# msg = driver.find_element(By.ID, "demo").text
-# assert "Ola" in msg
-# '''
-# Output is
-# Please enter your name:
-# '''
+
+myalert = driver.switch_to.alert
+print(myalert.text)
+'''
+Output is
+Please enter your name:
+'''
+
+myalert.send_keys("Ola")
+myalert.accept()
+# myalert.dismiss()
+'''
+Output displays as expected
+'''
+
+# Validation
+msg = driver.find_element(By.ID, "demo").text
+assert "Ola" in msg
+'''
+Output is
+Please enter your name:
+'''
 
 # Alerts Handling Using Explicit Wait (EXAM QUESTION)
 my_wait = WebDriverWait(driver, 10) # my_wait is variable name
