@@ -21,8 +21,12 @@ Commands to handle Alerts
 5. myalert.send_keys() ==> this will send texts to prompt alert
 E.g
 '''
+from idlelib.run import MyHandler
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 opt = webdriver.ChromeOptions()
 opt.add_experimental_option("detach" , True)
 driver = webdriver.Chrome(options=opt)
@@ -36,14 +40,44 @@ driver.find_element(By.ID, "promptBtn").click()
 Output is
 Prompt alert popup box was displayed
 '''
+#
+# myalert = driver.switch_to.alert
+# print(myalert.text)
+# '''
+# Output is
+# Please enter your name:
+# '''
+#
+# myalert.send_keys("Ola")
+# myalert.accept()
+# # myalert.dismiss()
+# '''
+# Output displays as expected
+# '''
+#
+# # Validation
+# msg = driver.find_element(By.ID, "demo").text
+# assert "Ola" in msg
+# '''
+# Output is
+# Please enter your name:
+# '''
 
-myalert = driver.switch_to.alert
+# Alerts Handling Using Explicit Wait (EXAM QUESTION)
+my_wait = WebDriverWait(driver, 10) # my_wait is variable name
+myalert = my_wait.until(EC.alert_is_present())
 print(myalert.text)
+myalert.send_keys("Ola")
+myalert.accept()
+
+# # Validation
+msg = driver.find_element(By.ID, "demo").text
+assert "Ola" in msg
 '''
 Output is
 Please enter your name:
+
+Meaning "myalert.send_keys("Ola")" is passed
 '''
 
-myalert.send_keys("Shyla")
-
-driver.quit()
+# driver.quit()
