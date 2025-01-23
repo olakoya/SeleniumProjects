@@ -74,7 +74,64 @@ Test Passed
 # Example 2 ==> Multiple Selected Dropdown
 drop_down_element = driver.find_element(By.XPATH, "//select[@id='colors']")
 drop_down = Select(drop_down_element)
-print(drop_down.is_multiple)
+print(drop_down.is_multiple) # True
+drop_down.select_by_visible_text("Blue")
+drop_down.select_by_value("red")
+drop_down.select_by_index(3)
+'''
+Output works as expected and displays
+True
+'''
+
+print(drop_down.first_selected_option.text)
+'''
+Output works as expected and displays
+True
+Red (this shows that red was selected first)
+'''
+# Repeating code lines 36 to 41 but for dropdown colors and above one was for countries
+all_selected_options = drop_down.all_selected_options
+for option in all_selected_options:
+    print(option.text)
+'''
+Output is 
+True
+Red
+Red
+Blue
+Yellow
+Red
+'''
+# Deselecting Options
+# drop_down.deselect_by_visible_text("Blue")
+# drop_down.deselect_by_value("red")
+# drop_down.deselect_by_index(3)
+'''
+Output is 
+True
+Red
+Red
+Blue
+Yellow
+Red
+'''
+# Using the below one single method code to deselect the options unlike the lines of codes in 186 to 108
+drop_down.deselect_all()
+'''
+Output is 
+True
+Red
+Red
+Blue
+Yellow
+Red
+'''
 
 # driver.quit()
 # driver.close()
+
+'''
+One must always import the select tag name 'from selenium.webdriver.support.select import Select' in line 12 before eoe can use the select 
+and deselect method
+'''
+
