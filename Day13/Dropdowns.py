@@ -20,10 +20,11 @@ driver.implicitly_wait(10)
 driver.get("https://testautomationpractice.blogspot.com/")
 driver.maximize_window()
 
-drop_down_element = driver.find_element(By.XPATH, "//select[@id='country']") # using 'select' as tag name
-# It's import to Select element whenever dropdown element is use
-drop_down = Select(drop_down_element) # there are lots of variables to access in the Select class
-# One of the method of Select is 'visible text'
+# # Example 1 ==> Single Selected  Dropdown
+# drop_down_element = driver.find_element(By.XPATH, "//select[@id='country']") # using 'select' as tag name
+# # It's import to Select element whenever dropdown element is use
+# drop_down = Select(drop_down_element) # there are lots of variables to access in the Select class
+# # One of the method of Select is 'visible text'
 # drop_down.select_by_visible_text("United Kingdom")
 '''
 Output works as expected for UK
@@ -32,12 +33,12 @@ Output works as expected for UK
 '''
 Output works as expected for Aussie
 '''
-drop_down.select_by_index(3) # Selecting 3 as Germany index number by counting from 0123 of which Germany is on 4th line
-# However, the above code in line 35 for index isn't advisable to use
-alloptions = drop_down.options
-print(len(alloptions))
-for option in alloptions:
-    print(option.text)
+# drop_down.select_by_index(3) # Selecting 3 as Germany index number by counting from 0123 of which Germany is on 4th line
+# # However, the above code in line 35 for index isn't advisable to use
+# alloptions = drop_down.options
+# print(len(alloptions))
+# for option in alloptions:
+#     print(option.text)
 
 '''
 Output works as expected and displayed list below in terminal
@@ -57,4 +58,23 @@ Output after adding line 38 to print the total length is
 10
 '''
 
-driver.quit()
+# assert drop_down.first_selected_option.text == "United Kingdom" # assert is used for validation or assert is validation
+'''
+Output works as expected 
+'''
+# if drop_down.first_selected_option.text == "United Kingdom": # If actual(drop_down....) isn't equal to expected(UK) it will 'fail' the action
+#     print("Test Passed")
+# else:
+#     print("Test Failed")
+'''
+Output works as expected and displays
+Test Passed
+'''
+
+# Example 2 ==> Multiple Selected Dropdown
+drop_down_element = driver.find_element(By.XPATH, "//select[@id='colors']")
+drop_down = Select(drop_down_element)
+print(drop_down.is_multiple)
+
+# driver.quit()
+# driver.close()
