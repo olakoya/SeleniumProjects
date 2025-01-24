@@ -33,7 +33,7 @@ driver.find_element(By.XPATH,"//input[@value='Java' or @value='Python' or @value
 Output works as expected by selecting HTML, CSS and Java
 '''
 # Capture all options from dropdown
-all_options = driver.find_elements(By.XPATH,"//ul[contains(@class,'multiselect')]//label/input")
+all_options = driver.find_elements(By.XPATH,"//ul[contains(@class,'multiselect')]//label")
 # print(len(all_options))
 # for option in all_options:
 #     print(option.text)
@@ -42,17 +42,10 @@ Output is
 11
 '''
 
-# lst = []
 for option in all_options:
-#     if option.is_selected():
-#         lst.append(option.get_attribute("value"))
-#         option.click()
-    if option.text == "Python" or option.text=="Oracle":
+    if option.text == "Python" or option.text=="Oracle": # If this condition becomes true thr below action will be executed
         option.click()
-#
-# print(lst)
 '''
 Output is
-11
-['HTML', 'CSS']
+Output works as expected by selecting HTML, CSS, Java, Python and Oracle
 '''
