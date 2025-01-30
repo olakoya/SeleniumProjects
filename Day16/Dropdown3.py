@@ -1,4 +1,15 @@
 '''
+Dropdown
+---------
+- This is the auto suggest dropdown
+- Dropdown with hidden items
+
+- Explicit wait = Declaration + Usage
+- Declaration ==> WebDriver Class
+
+- ctrl+/ or frwdslash/
+
+- Freezing th4 screen is required
 
 
 The reusable code below is called BOILER PLAY CODES
@@ -21,21 +32,28 @@ driver.implicitly_wait(10)
 driver.get("https://www.google.com/")
 driver.maximize_window()
 
+mywait = WebDriverWait(driver, 10) # Declaration
+
 driver.find_element(By.NAME, "q").send_keys("selenium")
 # time.sleep(3)
-options = driver.find_elements(By.XPATH, "//textarea[@name='q']")
+# options = driver.find_elements(By.XPATH, "//ul[@@role='listbox']//li")
+options = mywait.until(EC.visibility_of_all_elements_located((By.XPATH, "//ul[@@role='listbox']//li")))
 print(len(options))
 
 for option in options:
-    print(option.text)
-    # if option.text == "selenium download":
-    #     option.click()
-    #     break
+    # print(option.text)
+    if option.text == "selenium download":
+        option.click()
+        break
 
 '''
 Output is 
 Title: Test Passed
+
+Output after adding lines 31 and 36
+True
 '''
+
 
 driver.quit()
 
