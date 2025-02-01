@@ -98,5 +98,35 @@ Master In Java Amod JAVA 2000
 Master In JS Amit Javascript 1000 
 '''
 
+# Read the Data Based on Condition (if author is Amit read books data from the table)
+for r in range(2,len(nosofrows)+1):
+    authorName = driver.find_element(By.XPATH, "//table[@name='BookTable']//tr["+str(r) + "]/td[2]").text
+    if authorName == "Amit":
+        bookname = driver.find_element(By.XPATH, "//table[@name='BookTable']//tr["+str(r) + "]/td[1]").text
+        subject = driver.find_element(By.XPATH, "//table[@name='BookTable']//tr["+str(r) + "]/td[3]").text
+        price = driver.find_element(By.XPATH, "//table[@name='BookTable']//tr[" + str(r) + "]/td[4]").text
+    print(bookname, " ", subject, " ", price)
+
+'''
+Output is
+7
+4
+Javascript
+Learn Selenium Amit Selenium 300 
+Learn Java Mukesh Java 500 
+Learn JS Animesh Javascript 300 
+Master In Selenium Mukesh Selenium 3000 
+Master In Java Amod JAVA 2000 
+Master In JS Amit Javascript 1000 
+Learn Selenium   Selenium   300
+Learn Selenium   Selenium   300
+Learn Selenium   Selenium   300
+Learn Selenium   Selenium   300
+Learn Selenium   Selenium   300
+Master In JS   Javascript   1000
+
+'''
+
+
 
 driver.quit()
