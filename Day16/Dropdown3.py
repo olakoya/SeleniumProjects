@@ -36,8 +36,8 @@ mywait = WebDriverWait(driver, 10) # Declaration
 
 driver.find_element(By.NAME, "q").send_keys("selenium")
 # time.sleep(3)
-# options = driver.find_elements(By.XPATH, "//ul[@@role='listbox']//li")
-options = mywait.until(EC.visibility_of_all_elements_located((By.XPATH, "//ul[@@role='listbox']//li")))
+options = driver.find_elements(By.XPATH, "//ul[@role='listbox']//li")
+# options = mywait.until(EC.visibility_of_all_elements_located((By.XPATH, "//ul[@@role='listbox']//li")))
 print(len(options))
 
 for option in options:
