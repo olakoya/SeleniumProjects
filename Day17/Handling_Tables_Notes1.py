@@ -15,6 +15,7 @@ Types of Tables
 a. To use variables one needs Dynamic Xpath
 
 b. Dynamic Xpath --> this is variables inside Xpath
+//table[@name='BookTable']//tr["+str(r)+"]/td["+str(c)+"]
 
 c.//table[@name="BookTable"]//tr[7]/td[3] the rows tr[7] and data numbers td[3] are not fixed
 
@@ -41,4 +42,7 @@ range(2,11) --> 2 to 10
 
 range(2,nosofrows+1) --> 2 to 6
 ange(2,nosofcols+1)
+
+
+//table[@name='BookTable']//tr["+str(r)+"]/td["+str(c)+"]
 '''
