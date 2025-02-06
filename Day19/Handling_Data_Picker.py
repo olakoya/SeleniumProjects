@@ -43,8 +43,7 @@ Output works as expected
 # input_date_picker = driver.find_element(By.ID, "datepicker")
 # input_date_picker.click()
 
-# Year selection (It can be a label or drop down)
-# Month selection (It can be a label or drop down)
+
 # Day selection (It can be a label or drop down)
 
 # Date Selection (Most of the time it is a table)
