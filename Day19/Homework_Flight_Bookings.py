@@ -14,7 +14,7 @@ driver.implicitly_wait(10)
 driver.get("https://www.booking.com/flights/")
 driver.maximize_window()
 
-input_date_picker = driver.find_element(By.XPATH, "//span[@class='Text-module__root--variant-body_2___7cHHf']")
+input_date_picker = driver.find_element(By.CLASS_NAME, "ShellButton-module__btn___lMwQM")
 input_date_picker.send_keys("Sat 8 Mar - Sat 15 Mar")
 
-driver.close()
+# driver.close()
