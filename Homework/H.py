@@ -1,3 +1,37 @@
+'''
+The Exercise
+--------------
+
+Goal
+
+Build an automated browser suite to test the functionality of the dengro.com website.
+Requirements
+
+Use any testing tool of your choice.
+Use any strongly typed programming language of your choice.
+Your project must check the functionality in 2 major browsers.
+Your project must test the 5 different pieces of functionality listed below
+
+Assert that a piece of text appears on a given page
+Assert clicking a button does some functionality
+Assert clicking a link navigates correctly
+Assert that the pricing page allows users to change their currency https://dengro.com/pricing and that the pricing panels reflect that
+Capture a screenshot of any page
+
+Guide
+
+You should focus not only on the functionality of your code but also the cleanliness.
+The code should be easy to read and follow good coding practices.
+Please spend no more than 2-3 hours on this.
+
+Submission
+
+Complete your project preferably by close of play Mon 10th or latest by 1pm Tue 11th Feb
+Submit via a source code control tool, such as a GitHub repository.
+Include a README.md describing how to install and run your project.
+
+
+'''
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
@@ -11,7 +45,7 @@ opt.add_argument("--lang=hi")
 
 driver = webdriver.Chrome(options=opt)
 driver.implicitly_wait(10)
-driver.get("https://testautomationpractice.blogspot.com/")
+driver.get("https://dengro.com/")
 driver.maximize_window()
 import time
 
