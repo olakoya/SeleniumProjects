@@ -22,7 +22,7 @@ def test_dengro_functionality(browser_name):
 
     try:
         # 1. Assert that a piece of text appears on a given page
-        # assert "Welcome to Dengro" in driver.page_source, "Text not found on page"
+        assert "Practice growth never felt so easy" in driver.page_source, "Text not found on page"
 
         # 2. Assert clicking a button does some functionality
         button = driver.find_element(By.CSS_SELECTOR, "button.cta-button")
