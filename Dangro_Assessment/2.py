@@ -3,14 +3,16 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import pytest
+from _pytest.config import get_plugin_manager
 import time
 
 # Function to initialize the browser driver
 def initialize_browser(browser_name):
     if browser_name == "chrome":
         driver = webdriver.Chrome()
-    elif browser_name == "safari":
-        driver = webdriver.Safari()
+    elif browser_name == "edge":
+        driver = webdriver.Edge()
     else:
         raise ValueError("Unsupported browser")
     return driver

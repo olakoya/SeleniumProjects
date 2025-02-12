@@ -62,16 +62,16 @@ driver.maximize_window()
 # Shadow Element
 #------------------
 # Shadow Host
-# shadow_host = driver.find_element(By.XPATH, "//div[@id='shadow-root']")
-#
-# # Shadow Root
-# # shadow_root = shadow_host.shadow_root
-#
-# shadow_root = driver.execute_script("return arguments[0].shadowRoot", shadow_host)
-#
-# # shadow_element = shadow_root.find_element(By.XPATH, "//div[@id='shadow-element']")
-# shadow_element = shadow_root.find_element(By.CSS_SELECTOR, "#shadow-element")
-# print(shadow_element.is_displayed())
+shadow_host = driver.find_element(By.XPATH, "//div[@id='shadow-root']")
+
+# Shadow Root
+# shadow_root = shadow_host.shadow_root
+
+shadow_root = driver.execute_script("return arguments[0].shadowRoot", shadow_host)
+
+# shadow_element = shadow_root.find_element(By.XPATH, "//div[@id='shadow-element']")
+shadow_element = shadow_root.find_element(By.CSS_SELECTOR, "#shadow-element")
+print(shadow_element.is_displayed())
 '''
 Output is
 True
@@ -90,12 +90,12 @@ Executing Javascript Statement
 # Nested Shadow Element
 #------------------------
 
-# shadow_host_1 = driver.find_element(By.XPATH, "//div[@id='shadow-root']")
-# shadow_root_1 = shadow_host_1.shadow_root
-# shadow_host_2 = shadow_root_1.find_element(By.CSS_SELECTOR, "#inner-shadow-dom")
-# shadow_root_2 = shadow_host_2.shadow_root
-# shadow_element = shadow_root_2.find_element(By.CSS_SELECTOR, "#nested-shadow-element")
-# print(shadow_element.is_displayed())
+shadow_host_1 = driver.find_element(By.XPATH, "//div[@id='shadow-root']")
+shadow_root_1 = shadow_host_1.shadow_root
+shadow_host_2 = shadow_root_1.find_element(By.CSS_SELECTOR, "#inner-shadow-dom")
+shadow_root_2 = shadow_host_2.shadow_root
+shadow_element = shadow_root_2.find_element(By.CSS_SELECTOR, "#nested-shadow-element")
+print(shadow_element.is_displayed())
 '''
 Output is 
 True
