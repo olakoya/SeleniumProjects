@@ -12,13 +12,15 @@ driver = webdriver.Chrome(options=opt)
 driver.implicitly_wait(10)
 # driver.get("https://testautomationpractice.blogspot.com/")
 # driver.get("https://www.amazon.com/")
-driver.get("https://www.facebook.com/")
+# driver.get("https://www.facebook.com/")
 # driver.get("https://www.ebay.com/")
 # driver.get("https://www.gumtree.com/")
-# driver.get("https://dengro.com")
+driver.get("https://dengro.com")
 driver.maximize_window()
 
-cookies = driver.get_cookies()
+
+# Get all Cookies
+# cookies = driver.get_cookies()
 # print(len(cookies))
 # print(cookies)
 
@@ -103,7 +105,83 @@ Output for Facebook is
 []
 '''
 
+# To add a Cookie
+driver.add_cookie({"name": "UserID", "value": "abc123456"})
+driver.add_cookie({"name": "AuthToken", "value": "token987654"})
+cookies = driver.get_cookies()
+print(len(cookies))
+print(cookies)
 
+print(driver.get_cookie("AuthToken"))
 
+'''
+Output is
+1
 
+Output after adding line 110
+2
+'''
+
+# To delete Cookie
+# driver.delete_all_cookies()
+
+'''
+Output after deleting all cookies on Facebook
+2
+
+For Dengro
+7
+
+After Adding Dengro
+7
+[{'domain': 'dengro.com', 'httpOnly': False, 'name': 'UserID', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'abc123456'}
+, {'domain': 'dengro.com', 'expiry': 1771183709, 'httpOnly': False, 'name': 'cookieyes-consent', 'path': '/', 'sameSite': 'Strict', 
+'secure': True, 'value': 'consentid:RjVjQVd2OWhaOVJmZmJmZmQ5ZHdKNkY5eDcyVmxwWDU,consent:,action:,necessary:,functional:,analytics:,
+performance:,advertisement:'}, {'domain': '.dengro.com', 'expiry': 1739649509, 'httpOnly': False, 'name': '__hssc', 'path': '/', 
+'sameSite': 'Lax', 'secure': False, 'value': '182600377.1.1739647709539'}, {'domain': '.dengro.com', 'httpOnly': False, 'name': 
+'__hssrc', 'path': '/', 'sameSite': 'Lax', 'secure': False, 'value': '1'}, {'domain': 'dengro.com', 'httpOnly': False, 'name': 
+'AuthToken', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'token987654'}, {'domain': '.dengro.com', 'expiry': 1755199709
+, 'httpOnly': False, 'name': 'hubspotutk', 'path': '/', 'sameSite': 'Lax', 'secure': False, 'value': '6af45e6c0f9382bdd4f70027594ad4
+57'}, {'domain': '.dengro.com', 'expiry': 1755199709, 'httpOnly': False, 'name': '__hstc', 'path': '/', 'sameSite': 'Lax', 'secure':
+ False, 'value': '182600377.6af45e6c0f9382bdd4f70027594ad457.1739647709539.1739647709539.1739647709539.1'}]
+ 
+ {'domain': 'dengro.com', 'httpOnly': False, 'name': 'AuthToken', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'token987654'}
+'''
+
+# Deleting Cookie Method
+driver.delete_cookie("AuthToken")
+cookies = driver.get_cookies()
+print(len(cookies))
+print(cookies)
+
+driver.delete_all_cookies()
+
+'''
+Output is 
+7
+[{'domain': 'dengro.com', 'httpOnly': False, 'name': 'UserID', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'abc123456'}
+, {'domain': 'dengro.com', 'expiry': 1771184542, 'httpOnly': False, 'name': 'cookieyes-consent', 'path': '/', 'sameSite': 'Strict', 
+'secure': True, 'value': 'consentid:UDAya1VMOENCU0NBVXJiN01ZYU1IeU94dGFneU5HRUE,consent:,action:,necessary:,functional:,analytics:,
+performance:,advertisement:'}, {'domain': '.dengro.com', 'expiry': 1739650344, 'httpOnly': False, 'name': '__hssc', 'path': '/', 
+'sameSite': 'Lax', 'secure': False, 'value': '182600377.1.1739648544778'}, {'domain': '.dengro.com', 'httpOnly': False, 'name': '__
+hssrc', 'path': '/', 'sameSite': 'Lax', 'secure': False, 'value': '1'}, {'domain': 'dengro.com', 'httpOnly': False, 'name': 'AuthToken'
+, 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'token987654'}, {'domain': '.dengro.com', 'expiry': 1755200544, 'httpOnly
+': False, 'name': 'hubspotutk', 'path': '/', 'sameSite': 'Lax', 'secure': False, 'value': 'b18a414e3fb4777af856a6acc275c41e'}, {'domain
+': '.dengro.com', 'expiry': 1755200544, 'httpOnly': False, 'name': '__hstc', 'path': '/', 'sameSite': 'Lax', 'secure': False, 'value':
+ '182600377.b18a414e3fb4777af856a6acc275c41e.1739648544778.1739648544778.1739648544778.1'}]
+{'domain': 'dengro.com', 'httpOnly': False, 'name': 'AuthToken', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'token987654'}
+
+Output after subtracting one cookie after execution
+6
+[{'domain': 'dengro.com', 'httpOnly': False, 'name': 'UserID', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'abc123456'}, 
+{'domain': 'dengro.com', 'expiry': 1771184542, 'httpOnly': False, 'name': 'cookieyes-consent', 'path': '/', 'sameSite': 'Strict', 
+'secure': True, 'value': 'consentid:UDAya1VMOENCU0NBVXJiN01ZYU1IeU94dGFneU5HRUE,consent:,action:,necessary:,functional:,analytics:,
+performance:,advertisement:'}, {'domain': '.dengro.com', 'expiry': 1739650344, 'httpOnly': False, 'name': '__hssc', 'path': '/', 
+'sameSite': 'Lax', 'secure': False, 'value': '182600377.1.1739648544778'}, {'domain': '.dengro.com', 'httpOnly': False, 'name': 
+'__hssrc', 'path': '/', 'sameSite': 'Lax', 'secure': False, 'value': '1'}, {'domain': '.dengro.com', 'expiry': 1755200544, 'httpOnly
+': False, 'name': 'hubspotutk', 'path': '/', 'sameSite': 'Lax', 'secure': False, 'value': 'b18a414e3fb4777af856a6acc275c41e'}, 
+{'domain': '.dengro.com', 'expiry': 1755200544, 'httpOnly': False, 'name': '__hstc', 'path': '/', 'sameSite': 'Lax', 'secure': 
+False, 'value': '182600377.b18a414e3fb4777af856a6acc275c41e.1739648544778.1739648544778.1739648544778.1'}]
+
+'''
 driver.close()
