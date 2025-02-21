@@ -5,7 +5,7 @@ Most of the web applications use sendkeys method --> send_keys() --> input
 Or file upload window and to use it there's another model to use --> file_upload window
 
 '''
-
+# Boiler Codes are reused to begin the code lines i.e. importing libraries from selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 

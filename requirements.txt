@@ -1,0 +1,7 @@
+selenium
+webdriver-manager
+pytest
+pyautogui
+pyperclip
+
+

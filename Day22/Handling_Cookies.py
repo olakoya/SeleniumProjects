@@ -1,3 +1,4 @@
+# Boiler Codes are reused to begin the code lines i.e. importing libraries from selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -20,7 +21,7 @@ driver.maximize_window()
 
 
 # Get all Cookies
-# cookies = driver.get_cookies()
+cookies = driver.get_cookies()
 # print(len(cookies))
 # print(cookies)
 
