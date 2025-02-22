@@ -3,5 +3,5 @@ webdriver-manager
 pytest
 pyautogui
 pyperclip
-
+openpyxl
 
