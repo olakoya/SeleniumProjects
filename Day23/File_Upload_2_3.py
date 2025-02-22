@@ -16,10 +16,10 @@ opt.add_argument("--lang=en-uk")
 
 driver = webdriver.Chrome(options=opt)
 driver.implicitly_wait(10)
-driver.get("https://www.foundit.in/upload")
 driver.maximize_window()
+driver.get("https://www.foundit.in/upload")
 
-file1 = r"'/Users/olakoya/Desktop/Covering Letters/OlaKoya-CoverLetter.docx'"
+file1 = r'/Users/olakoya/Desktop/Covering Letters/OlaKoya-CoverLetter.docx'
 
 # driver.find_element(By.XPATH, "//div[contains(text(),'Upload Resume')]").click()
 
