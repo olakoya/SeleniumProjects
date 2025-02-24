@@ -41,6 +41,13 @@ To install packages
 pip install -r requirements.txt
 pip install openpyxl
 
+Range functions generate --> sequence of numbers
+Range(10) --> 0 to 9
+Range(11) --> 0 to 10
+Range(1,11) --> 1 to 10
+
+Press --> ctrl + s --> to save the data
+
 E.g
 '''
 
@@ -68,20 +75,121 @@ Using sheet: Sheet1
 
 # Row and Colum Count
 workbook = openpyxl.load_workbook(file)
-sheet = workbook["Sheet1"]
+# sheet = workbook["Sheet1"]
+# sheet = workbook["Sheet2"]
 
-print(sheet.max_row)
-print(sheet.max_column)
+# Reading the Data
+
+# print(sheet.max_row)
+# print(sheet.max_column)
+# '''
+# Output is
+# 7
+# 7
+# '''
+#
+# # Reading a specific Cell Data
+# # data = sheet.cell(4, 4).value
+# # print(data)
+# '''
+# Output is
+# Compounded Annually
+# '''
+#
+# # data = sheet.cell(2, 6).value
+# # print(data)
+# '''
+# Output is
+# Pass
+# '''
+#
+# # Reading all rows and columns Data
+# data = sheet.cell(2, 6).value
+# print(data)
+#
+# for r in range(1,sheet.max_row+1): # rows
+#     for c in range(1,sheet.max_column+1): # columns
+#         data = sheet.cell(r,c).value
+#         print(data, end = " ")
+#     print()
+
 '''
 Output is
-7
-7
-'''
-
-# Reading a specific Cell Data
-data = sheet.cell(4, 4).value
-print(data)
-'''
-Output is
+Initial Deposit Am
+Interest Rate
+Length (Months)
+Compounding
+Total
+Expected
+500.0
+2.0
+24.0
+Compounded Monthly
+$520.39
+Pass
+1000.0
+4.0
+24.0
+Compounded Monthly
+$1,083.14
+Pass
+1500.0
+2.0
+48.0
 Compounded Annually
+$1,623.65
+Pass
+3000.0
+4.0
+24.0
+Compounded Annually
+$3,244.89
+Pass
+5000.0
+2.0
+48.0
+Compounded Monthly
+$0
+Fail
+None
+None
+None
+None
+None
+None
+
+Output for code line 108 print(data, end = " ")
+Initial Deposit Am Interest Rate Length (Months) Compounding Total Expected 500.0 2.0 24.0 Compounded Monthly $520.39 
+Pass 1000.0 4.0 24.0 Compounded Monthly $1,083.14 Pass 1500.0 2.0 48.0 Compounded Annually $1,623.65 Pass 3000.0 4.0 24.0 
+Compounded Annually $3,244.89 Pass 5000.0 2.0 48.0 Compounded Monthly $0 Fail None None None None None None 
+
+
+Output after adding line 190 print()
+Initial Deposit Am Interest Rate Length (Months) Compounding Total Expected None 
+500.0 2.0 24.0 Compounded Monthly $520.39 Pass None 
+1000.0 4.0 24.0 Compounded Monthly $1,083.14 Pass None 
+1500.0 2.0 48.0 Compounded Annually $1,623.65 Pass None 
+3000.0 4.0 24.0 Compounded Annually $3,244.89 Pass None 
+5000.0 2.0 48.0 Compounded Monthly $0 Fail None 
+None None None None None None None 
 '''
+
+# Writing the Data
+# sheet.cell(3,3).value = "Ola"
+#
+# workbook.save(file)
+
+# Check if "Sheet2" exists; if not, create it (Codes from ChatGpt when the above codes was given me error output)
+if "Sheet2" not in workbook.sheetnames:
+    sheet2 = workbook.create_sheet("Sheet2")  # Create new sheet
+    print("Sheet2 created successfully.")
+else:
+    sheet2 = workbook["Sheet2"]  # Select existing Sheet2
+    print("Sheet2 already exists.")
+
+# Write data to a specific row and column (e.g., row 3, column 2)
+sheet2.cell(row=3, column=2, value="Hello from Sheet2!")
+
+# Save the changes
+workbook.save(file)
+print("Data written and workbook saved successfully.")
