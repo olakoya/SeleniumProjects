@@ -48,6 +48,19 @@ Range(1,11) --> 1 to 10
 
 Press --> ctrl + s --> to save the data
 
+100 Test Cases equals --> 100 Automation code + 100 same excel operations
+
+Possible Problems are:
+---------------------
+Duplication issues
+Maintenance issues
+
+Possible Answer is
+-------------------
+Creating Utilities file
+
+Utility files contain --> reusable methods and functions
+
 E.g
 '''
 
@@ -188,7 +201,15 @@ else:
     print("Sheet2 already exists.")
 
 # Write data to a specific row and column (e.g., row 3, column 2)
-sheet2.cell(row=3, column=2, value="Hello from Sheet2!")
+sheet2.cell(row=1, column=1, value="Hello from Sheet2!")
+sheet2.cell(row=1, column=2, value="Hello from Sheet2!")
+sheet2.cell(row=1, column=3, value="Hello from Sheet2!")
+sheet2.cell(row=2, column=1, value="Hello from Ola!")
+sheet2.cell(row=2, column=2, value="Hello from Ola!")
+sheet2.cell(row=2, column=3, value="Hello from Ola!")
+sheet2.cell(row=3, column=1, value="Hello from me!")
+sheet2.cell(row=3, column=2, value="Hello from me!")
+sheet2.cell(row=3, column=3, value="Hello from me!")
 
 # Save the changes
 workbook.save(file)
