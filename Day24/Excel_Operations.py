@@ -2,7 +2,7 @@
 Data Driven Testing
 --------------------
 
-Multiple sets of Data is required to test ---> Functionality (Test case) in the area of validation and this is known as ---> Data Driven Testing
+Multiple sets of Data are required to test ---> Functionality (Test case) in the area of validation and this is known as ---> Data Driven Testing
 
 Data Driven Testing are performed by Excel Files which is known as Database
 
@@ -14,52 +14,52 @@ File --> load Workbook ---> to get Sheets ---> Rows and Columns ---> Cell(r,c)
 
 Operations on Excel Files
 -------------------------
-This contains count of rows and columns
-Reading data from all rows and columns, also specific column data
-Write data into multiple cells
+- This contains count of rows and columns
+- Reading data from all rows and columns, also specific column data
+- Write data into multiple cells
 
 Read the Data from Cell
 -------------------------
-To read data, it contains sheet and cell of which will return cell i.e. data
-= sheet.cell(r,c).value
+- To read data, it contains sheet and cell of which will return cell i.e. data
+        = sheet.cell(r,c).value
 
 How to write a Data from Cell?
 -------------------------------
-sheet.cell(r,c).value = data ---> save
+        sheet.cell(r,c).value = data ---> save
 
-when we are writing the data we should always close the file on which we are working
+- When we are writing the data we should always close the file on which we are working
 
 Data Driven Testing
 ------------------
-Duplication of the code
-Maintainability
+- Duplication of the code
+- Maintainability
 
-Utility ==> a file contains reusable functions
+Utility ==> is a file that contains reusable functions
 
 To install packages
 -------------------
-pip install -r requirements.txt
-pip install openpyxl
+- pip install -r requirements.txt
+- pip install openpyxl
 
 Range functions generate --> sequence of numbers
-Range(10) --> 0 to 9
-Range(11) --> 0 to 10
-Range(1,11) --> 1 to 10
+- Range(10) --> 0 to 9
+- Range(11) --> 0 to 10
+- Range(1,11) --> 1 to 10
 
-Press --> ctrl + s --> to save the data
+    Press --> ctrl + s --> to save the data
 
-100 Test Cases equals --> 100 Automation code + 100 same excel operations
+- 100 Test Cases equals --> 100 Automation code + 100 same excel operations
 
 Possible Problems are:
 ---------------------
-Duplication issues
-Maintenance issues
+- Duplication issues
+- Maintenance issues
 
 Possible Answer is
 -------------------
-Creating Utilities file
+- Creating Utilities file
 
-Utility files contain --> reusable methods and functions
+- Utility files contain --> reusable methods and functions
 
 E.g
 '''
