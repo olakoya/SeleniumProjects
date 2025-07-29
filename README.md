@@ -1,7 +1,7 @@
 ````markdown
 # Selenium Web Automation Projects
 
-This repository contains a collection of Selenium-based automation scripts developed as part of my continious learning and real-world practice in test automation.
+This repository contains a collection of Selenium-based automation scripts developed as part of my ongoing upskilling, continuous learning, and real-world test automation practice.
 
 These projects focus on automating various web applications and test scenarios using Python, Selenium WebDriver, and supporting tools.
 
